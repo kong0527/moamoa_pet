@@ -4,35 +4,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Create &mdash; Onepage Website Template by Colorlib</title>
+<title>moamoa_pet</title>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target"
 	data-offset="300">
-	<div class="container">
-		<div class="row align-items-center justify-content-center text-center">
-
-			<div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
-
-				<div class="row justify-content-center mb-4">
-					<div class="col-md-8 text-center">
-						<h1>
-							We Love To Build <span class="typed-words"></span>
-						</h1>
-						<p class="lead mb-5">
-							Free Web Template by <a href="#" target="_blank">Colorlib</a>
-						</p>
-						<div>
-							<a data-fancybox data-ratio="2"
-								href="https://vimeo.com/317571768"
-								class="btn btn-primary btn-md">Watch Video</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
 	<section class="site-section">
+		<div class="container">	
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>마리 수</th>
+				</tr>
+			</thead>
+		</table>
+		</div>
+	</section>
+	<!--  <section class="site-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-4">
@@ -81,6 +69,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --> 
 </body>
 </html>

@@ -1,6 +1,4 @@
 <!-- Footer -->
-
-
 <footer class="site-footer">
 	<div class="container">
 			<div class="col-md-12">
