@@ -5,8 +5,7 @@
 		<div class="row align-items-center">
 			<div class="col-11 col-xl-2">
 				<h1 class="mb-0 site-logo">
-					<a href="#" class="text-black h2 mb-0">Create<span
-						class="text-primary">.</span>
+					<a href="#" class="text-black h2 mb-0">moamoa<span class="text-primary">.</span>
 					</a>
 				</h1>
 			</div>
