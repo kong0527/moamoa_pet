@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.petData.dao.mybatis.mapper.NameMapper">
+	<select id="getGeneratedName" resultType="com.petData.Entity.Name" parameterType="com.petData.Controller.NameCommand">
+		SELECT *
+		FROM (
+			SELECT * FROM domestic
+			UNION
+			SELECT * FROM overseas
+		) AS T
+		WHERE T.petName LIKE CONCAT(#{letter}, '%') AND T.population <= #{frequency}
+		ORDER BY rand() limit 5
+	</select>
+<!-- 한글 처리 어떻게 할지 생각해보기
+ㄱ : select * from 테이블명 where binary 필드명 between binary '가' and binary '나'
+ㄴ : select * from 테이블명 where binary 필드명 between binary '나' and binary '다'
+ㄷ : select * from 테이블명 where binary 필드명 between binary '다' and binary '라'
+...
+ㅎ : select * from 테이블명 where binary 필드명 between binary '하' and binary 'chr(0xfe)'
+-->
+</mapper>
