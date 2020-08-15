@@ -10,8 +10,8 @@ public class MainController {
 //		return "index"; 
 //	}
 	
-	@RequestMapping("/generator") 
+	/*@RequestMapping("/generator") 
 		public String generator() {
 			return "generator";
-		}
+		}*/
 }
