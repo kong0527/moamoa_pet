@@ -16,6 +16,8 @@
    href="${pageContext.request.contextPath}/resources/fonts/icomoon/style.css">
 <link rel="stylesheet"
    href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+<%-- <link rel="stylesheet"
+   href="${pageContext.request.contextPath}/resources/css/bootstrap.css"> --%>
 <link rel="stylesheet"
    href="${pageContext.request.contextPath}/resources/css/jquery-ui.css">
 <link rel="stylesheet"

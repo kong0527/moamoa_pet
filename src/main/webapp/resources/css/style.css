@@ -1393,7 +1393,17 @@ h1, h2, h3, h4, h5,
       background: #2b2b2b;
       color: #fff; }
 
-.custom-pagination a, .custom-pagination span {
+.pagination {
+   	display: -webkit-box; 
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+  
+.custom-pagination a, .custom-pagination span, .custom-pagination li {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -1408,7 +1418,21 @@ h1, h2, h3, h4, h5,
 
 .custom-pagination .more-page {
   background: none;
-  letter-spacing: .1em; }
+  letter-spacing: .1em; } 
+  
+/* .custom-pagination li {
+  display: inline-block; }
+  
+.custom-pagination li a {
+  padding: 10px 10px;
+  display: inline-block;
+  color: #b3b3b3; }
+      
+.custom-pagination li a:hover {
+  color: #000; }
+        
+.custom-pagination li.active a {
+  color: #8bc34a; } */
 
 .form-search-wrap {
   background: #fff;
@@ -1792,3 +1816,14 @@ h1, h2, h3, h4, h5,
   .post-meta a {
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    
+.searchBox{
+	margin:0 auto;
+	-webkit-box-flex:0;
+	-ms-flex:0 0 75%;
+	flex:0 0 75%;
+	max-width:75%}
+
+
+
+
