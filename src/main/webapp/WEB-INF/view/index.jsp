@@ -18,12 +18,17 @@
 						<th>마리 수 🐶</th>
 					</tr>
 				</thead>
+				<tbody>
+					<c:forEach var="petList" items="${petList}">
+						<tr>
+							<td>${petList.petName}</td>
+							<td>${petList.population}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
 			</table>
 			</div>
 		</div>
-	</section>
-	 <section class="site-section">
-		
 	</section> 
 </body>
 </html>
