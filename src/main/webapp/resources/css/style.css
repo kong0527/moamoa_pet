@@ -1419,20 +1419,17 @@ h1, h2, h3, h4, h5,
 .custom-pagination .more-page {
   background: none;
   letter-spacing: .1em; } 
-  
-/* .custom-pagination li {
-  display: inline-block; }
-  
-.custom-pagination li a {
+    
+/* .custom-pagination li a {
   padding: 10px 10px;
   display: inline-block;
-  color: #b3b3b3; }
+  color: #b3b3b3; } */
       
 .custom-pagination li a:hover {
-  color: #000; }
+  background: #b2b2b2; }
         
 .custom-pagination li.active a {
-  color: #8bc34a; } */
+  background: #b2b2b2; } 
 
 .form-search-wrap {
   background: #fff;
