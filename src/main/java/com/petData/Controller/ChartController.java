@@ -1,10 +1,13 @@
 package com.petData.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
@@ -43,4 +46,24 @@ public class ChartController {
 		mv.setViewName("eChart");
 		return mv;
     }
+	
+	@GetMapping("/kChart/search")
+	public ModelAndView searchKchart(ModelAndView mv, @RequestParam(value="keyword") String keyword) {
+		Domestic result = chartService.searchKchart(keyword);
+		List<Domestic> recommend = chartService.recomKchart(keyword);
+		mv.addObject("result", result);
+		mv.addObject("recomm", recommend);
+		mv.setViewName("kSearch");
+		return mv;
+	}
+	
+	@GetMapping("/eChart/search")
+	public ModelAndView searchEchart(ModelAndView mv, @RequestParam(value="keyword") String keyword) {
+		Overseas result = chartService.searchEchart(keyword);
+		List<Overseas> recommend = chartService.recomEchart(keyword);
+		mv.addObject("result", result);
+		mv.addObject("recomm", recommend);
+		mv.setViewName("eSearch");
+		return mv;
+	}
 }

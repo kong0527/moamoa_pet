@@ -11,4 +11,5 @@ import com.petData.Entity.Domestic;
 public interface KchartRepository extends JpaRepository<Domestic, String>{
 	List<Domestic> findAll();
 	List<Domestic> findByPetNameContaining(String keyword);
+	Domestic findByPetName(String keyword);
 }

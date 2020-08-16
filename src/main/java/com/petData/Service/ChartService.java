@@ -1,5 +1,7 @@
 package com.petData.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -36,4 +38,24 @@ public class ChartService {
 
         return eChartRepo.findAll(pageable);
     }
+	
+	public Domestic searchKchart(String keyword) {
+		Domestic result = kChartRepo.findByPetName(keyword);
+		return result;
+	}
+	
+	public List<Domestic> recomKchart(String keyword) {
+		List<Domestic> recommend = kChartRepo.findByPetNameContaining(keyword);
+		return recommend;
+	}
+	
+	public Overseas searchEchart(String keyword) {
+		Overseas result = eChartRepo.findByPetName(keyword);
+		return result;
+	}
+	
+	public List<Overseas> recomEchart(String keyword) {
+		List<Overseas> recommend = eChartRepo.findByPetNameContaining(keyword);
+		return recommend;
+	}
 }

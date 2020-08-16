@@ -11,4 +11,5 @@ import com.petData.Entity.Overseas;
 public interface EchartRepository extends JpaRepository<Overseas, String>{
 	List<Overseas> findAll();
 	List<Overseas> findByPetNameContaining(String keyword);
+	Overseas findByPetName(String keyword);
 }
