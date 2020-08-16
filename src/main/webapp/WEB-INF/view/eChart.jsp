@@ -48,7 +48,7 @@
 		<c:set var="start" value="${Math.floor(petList.number / 10) * 10 + 1}"/>
 		<c:set var="last" value="${start + 9 < petList.totalPages ? start + 9 : petList.totalPages}"/>
 			<li>
-	    	<a href="${pageContext.request.contextPath}/chart?page=1" aria-label="First">
+	    	<a href="${pageContext.request.contextPath}/eChart?page=1" aria-label="First">
 	        	<span aria-hidden="true">First</span>
 	    	</a>
 			</li>
@@ -57,14 +57,14 @@
 					<a href="#"><span aria-hidden="true">&lt;</span></a>
 				</c:if>
 				<c:if test="${!petList.first}">
-					<a href="${pageContext.request.contextPath}/chart?page=${petList.number}">
+					<a href="${pageContext.request.contextPath}/eChart?page=${petList.number}">
 						<span aria-hidden="true">&lt;</span>
     				</a>
 				</c:if>
 			</li>
 			<c:forEach begin="${start}" end="${last}" var="page">
 				<li ${page == petList.number + 1 ? 'class=active' : ''}>
-					<a href="${pageContext.request.contextPath}/chart?page=${page}">${page}</a>
+					<a href="${pageContext.request.contextPath}/eChart?page=${page}">${page}</a>
 				</li>
 			</c:forEach>
 			<li ${petList.last == true ? 'class=disabled' : ''}>
@@ -72,13 +72,13 @@
 					<a href="#"><span aria-hidden="true">&gt;</span></a>
 				</c:if>
 				<c:if test="${!petList.last}">
-					<a href="${pageContext.request.contextPath}/chart?page=${petList.number + 2}">
+					<a href="${pageContext.request.contextPath}/eChart?page=${petList.number + 2}">
 						<span aria-hidden="true">&gt;</span>
     				</a>
 				</c:if>
 			</li>
 			<li>
-	    	<a href="${pageContext.request.contextPath}/chart?page=${petList.totalPages}" aria-label="Last">
+	    	<a href="${pageContext.request.contextPath}/eChart?page=${petList.totalPages}" aria-label="Last">
 	        	<span aria-hidden="true">Last</span>
 	    	</a>
 			</li>
