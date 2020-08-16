@@ -9,7 +9,7 @@
 			UNION
 			SELECT * FROM overseas
 		) AS T
-		WHERE T.petName LIKE CONCAT(#{letter}, '%') AND T.population <= #{frequency}
+		WHERE T.petName LIKE CONCAT(#{letter}, '%') AND <![CDATA[T.population <= #{frequency}]]>
 		ORDER BY rand() limit 5
 	</select>
 <!-- 한글 처리 어떻게 할지 생각해보기
