@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="refresh" content="0;url=chart">
+<meta http-equiv="refresh" content="0;url=/chart">
 </head>
 <body>
 </body>

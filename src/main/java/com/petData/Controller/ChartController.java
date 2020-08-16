@@ -7,6 +7,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.petData.Entity.Domestic;
 import com.petData.Service.PetService;
@@ -20,8 +21,8 @@ public class ChartController {
 	PetService petService;
 	
 	@GetMapping("/")
-    public String home() {
-		return "index";
+    public RedirectView home(ModelAndView mv) {
+		return new RedirectView("/chart");
     }
 
 	@GetMapping("/chart")
