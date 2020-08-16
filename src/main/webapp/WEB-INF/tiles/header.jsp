@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
@@ -5,7 +7,7 @@
 		<div class="row align-items-center">
 			<div class="col-11 col-xl-2">
 				<h1 class="mb-0 site-logo">
-					<a href="#" class="text-black h2 mb-0">moamoa<span class="text-primary">.</span>
+					<a href="${pageContext.request.contextPath}/" class="text-black h2 mb-0">moamoa<span class="text-primary">.</span>
 					</a>
 				</h1>
 			</div>
@@ -15,9 +17,10 @@
 
 					<ul
 						class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-						<li><a href="#home-section" class="nav-link">Home</a></li>
+						<li><a href="${pageContext.request.contextPath}/kChart" class="nav-link">Domestic</a></li>
+						<li><a href="${pageContext.request.contextPath}/eChart" class="nav-link">Overseas</a></li>
 						<li><a href="#work-section" class="nav-link">Game</a></li>
-						<li><a href="#services-section" class="nav-link">Generator</a>
+						<li><a href=${pageContext.request.contextPath}/generator>Generator</a>
 						</li>
 					</ul>
 				</nav>
