@@ -1,4 +1,4 @@
-package com.petData.Entity;
+package com.petData.Domain;
 
 public class Name {
 	private String petName;

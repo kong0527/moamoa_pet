@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.petData.Entity.Name;
+import com.petData.Domain.Name;
 import com.petData.Service.Letter;
 import com.petData.Service.NameService;
 
@@ -53,6 +53,8 @@ public class NameController {
 	public ModelAndView generator(ModelAndView mv, HttpServletRequest request, @ModelAttribute("options") NameCommand command) {
 		//POST방식인 경우(필터링 사용했을 때)
 		if (request.getMethod().equals("POST")) {
+			int flag = letter.checkLetter((int)command.getLetter().charAt(0));
+			command.setFlag(flag);
 			List<Name> generatedNames = service.getGeneratedName(command);
 			mv.addObject("generatedNames", generatedNames);
 		}

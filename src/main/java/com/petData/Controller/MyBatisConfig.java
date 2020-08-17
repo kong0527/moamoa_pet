@@ -18,7 +18,7 @@ public class MyBatisConfig {
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
         
         sqlSessionFactory.setDataSource(dataSource);
-        sqlSessionFactory.setTypeAliasesPackage("com.petData.Entity");
+        sqlSessionFactory.setTypeAliasesPackage("com.petData.Domain");
         
         return sqlSessionFactory.getObject();
     }

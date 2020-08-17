@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.petData.Controller.NameCommand;
-import com.petData.Entity.Name;
+import com.petData.Domain.Name;
 
 @Mapper
 public interface NameMapper {

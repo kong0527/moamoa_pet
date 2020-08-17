@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.petData.Controller.NameCommand;
-import com.petData.Entity.Name;
+import com.petData.Domain.Name;
 import com.petData.dao.mybatis.mapper.NameMapper;
 
 @Repository

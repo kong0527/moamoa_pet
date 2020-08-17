@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.dao.DataAccessException;
 
 import com.petData.Controller.NameCommand;
-import com.petData.Entity.Name;
+import com.petData.Domain.Name;
 
 public interface NameDao {
 	

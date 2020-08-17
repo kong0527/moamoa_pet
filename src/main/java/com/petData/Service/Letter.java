@@ -40,6 +40,12 @@ public class Letter {
 		List<Letter> letter = new ArrayList<Letter>();
 		
 		for (int i = 'ㄱ'; i <= 'ㅎ'; i++) {
+			// 해당 조건은 '종성' 에 해당하기 때문에 ㄳ , ㄵ, ㄶ 같은 것들을 제거하기 위한 if문
+			// 초성의 경우 유니코드로 표현하는데, view에 나타나는 모양이 조금 다르기 때문에 이렇게 처리
+			if (i == 12595 || i == 12597 || i == 12598 || i == 12602 || i == 12603 ||
+					i == 12604 || i == 12605 || i == 12606 || i == 12607 || i == 12608 || i == 12612) {
+				continue;
+			}
 			letter.add((new Letter((char)i, (char)i + "　")));
 		}
 		
@@ -58,6 +64,15 @@ public class Letter {
 		}
 				
 		return letter;
+	}
+	
+	public int checkLetter(int letter) {
+		if (letter >= 65 && letter <= 90) {
+			return 1;
+		}
+		else {
+			return 2;
+		}
 	}
 	
 }

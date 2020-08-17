@@ -21,16 +21,28 @@
 								<tr>
 									<td colspan="2" align="center"><span style="font-weight:bold;">Select Letter</span></td>
 								</tr>
-								<tr>
-									<td align="center">Korean</td>
-									<td align="center">English</td>
+								<tr align="center">
+									<td>Korean</td>
+									<td>English</td>
 								</tr>
-								<tr>
-									<td align="center">
-										<form:radiobuttons items="${kLetters}" itemLabel="label" itemValue="letter" path="letter" />			
+								<tr align="center">
+									<td>
+										<c:forEach var="kLetters" items="${kLetters}" varStatus="status">
+											<input type="radio" name="letter" id="letter" value="${kLetters.letter}"> ${kLetters.label}
+											<c:if test="${0 eq status.count % 3}">
+												<br />
+											</c:if>
+										</c:forEach>
+										<!--<form:radiobuttons items="${kLetters}" itemLabel="label" itemValue="letter" path="letter" />-->			
 									</td>
-									<td align="center">
-										<form:radiobuttons items="${eLetters}" itemLabel="label" itemValue="letter" path="letter" />
+									<td>
+										<c:forEach var="eLetters" items="${eLetters}" varStatus="status">
+											<input type="radio" name="letter" id="letter" value="${eLetters.letter}"> ${eLetters.label}
+											<c:if test="${0 eq status.count % 4}">
+												<br />
+											</c:if>
+										</c:forEach>
+										<!--<form:radiobuttons items="${eLetters}" itemLabel="label" itemValue="letter" path="letter" />-->
 									</td>
 								</tr>
 								<tr>
@@ -41,11 +53,11 @@
 					<div class="col-md-3 col-lg-3">
 						<label for="selectFrequency">Select Frequency</label> <br /> 
 						<select id="frequency" name="frequency">
-							<option value="2">2이하</option>
-							<option value="10">10이하</option>
-							<option value="50">50이하</option>
-							<option value="100">100이하</option>
-							<option value="500">500이하</option>
+							<option value="1">1 ~ 2</option>
+							<option value="2">3 ~ 10</option>
+							<option value="3">11 ~ 50</option>
+							<option value="4">51 ~ 100</option>
+							<option value="5">101 ~ 500</option>
 						</select>
 					</div>
 					<div class="col-md-3 col-lg-3">
@@ -58,22 +70,29 @@
 	<section class="site-section">
 			<div class="container">
 				<div class="row align-items-center justify-content-center text-center">
-					<table class="table">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Population</th>
-							</tr>
-						</thead>
-						<tbody>
-							<c:forEach var="generatedNames" items="${generatedNames}">
-								<tr>
-									<td>${generatedNames.petName}</td>
-									<td>${generatedNames.population}</td>
-								</tr>
-							</c:forEach>
-						</tbody>
-					</table>
+						<c:if test="${generatedNames eq null }">
+							결과를 보려면 Generate 를 클릭하세요 ! 🐈🐕		
+						</c:if>
+						<c:if test="${generatedNames ne null}">
+							결과를 확인해 보세요 ! 🐈🐕
+							<br/><br/>
+							<table class="table">
+								<thead>
+									<tr align="center">
+										<th>Name</th>
+										<th>Population</th>
+									</tr>
+								</thead>
+								<tbody>
+									<c:forEach var="generatedNames" items="${generatedNames}">
+										<tr>
+											<td align="center">${generatedNames.petName}</td>
+											<td>${generatedNames.population}</td>
+										</tr>
+									</c:forEach>
+								</tbody>
+							</table>
+						</c:if>
 				</div>
 			</div>
 	</section>
