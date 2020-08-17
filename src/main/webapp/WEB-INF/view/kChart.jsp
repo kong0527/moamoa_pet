@@ -29,6 +29,7 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
+							<th>순위 🐾</th>
 							<th>이름 🐱</th>
 							<th>마리 수 🐶</th>
 						</tr>
@@ -36,6 +37,20 @@
 					<tbody>
 						<c:forEach var="pets" items="${pets}">
 							<tr>
+								<c:choose>
+								<c:when test="${pets.rank == 1}">
+									<td width=200>🥇${pets.rank}</td>
+								</c:when>
+								<c:when test="${pets.rank == 2}">
+									<td width=200>🥈${pets.rank}</td>
+								</c:when>
+								<c:when test="${pets.rank == 3}">
+									<td width=200>🥉${pets.rank}</td>
+								</c:when>
+								<c:otherwise>
+									<td width=200>🌈${pets.rank}</td>
+								</c:otherwise>
+								</c:choose>
 								<td width=200>${pets.petName}</td>
 								<td width=200>${pets.population}</td>
 							</tr>

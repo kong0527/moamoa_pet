@@ -19,10 +19,15 @@ public class Overseas{
 	
 	@Column(nullable = false, name="population")
 	private int population;
+	
+	@Column(nullable = false, name="rank")
+	private int rank;
 
 	@Builder
-	public Overseas(String petName, int population) {
+	public Overseas(String petName, int population, int rank) {
+		super();
 		this.petName = petName;
 		this.population = population;
+		this.rank = rank;
 	}
 }
