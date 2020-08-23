@@ -32,20 +32,16 @@
 			<br/>
 			<br/>
 			<div class="row align-items-center justify-content-center text-center">
-				<table class="table" frame=void>
-					<tr align="center">
-						<td>
-							<img src="resources/images/gameD.png" width="256px" height="256px" />
+				<div class="col-md-3 col-lg-4">
+					<img src="resources/images/gameD.png" width="256px" height="256px" />
 							<br/><br/>
 							Domestic Ver.
-						</td>
-						<td>
-							<img src="resources/images/gameO.png" width="256px" height="256px" />
+				</div>
+				<div class="col-md-3 col-lg-4">
+					<img src="resources/images/gameO.png" width="256px" height="256px" />
 							<br/><br/>
 							Overseas Ver.
-						</td>
-					</tr>
-				</table>
+				</div>
 			</div>
 		</div>
 	</section>
