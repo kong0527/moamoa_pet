@@ -14,4 +14,10 @@ public class MainController {
 		public String generator() {
 			return "generator";
 		}*/
+	
+	//임시
+	@RequestMapping("/game")
+	public String game() {
+		return "game";
+	}
 }

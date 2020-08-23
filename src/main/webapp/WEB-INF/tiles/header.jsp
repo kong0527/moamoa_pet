@@ -19,8 +19,8 @@
 						class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 						<li><a href="${pageContext.request.contextPath}/kChart" class="nav-link">Domestic</a></li>
 						<li><a href="${pageContext.request.contextPath}/eChart" class="nav-link">Overseas</a></li>
-						<li><a href="#work-section" class="nav-link">Game</a></li>
-						<li><a href=${pageContext.request.contextPath}/generator>Generator</a>
+						<li><a href="${pageContext.request.contextPath}/game">Game</a></li>
+						<li><a href="${pageContext.request.contextPath}/generator">Generator</a>
 						</li>
 					</ul>
 				</nav>
