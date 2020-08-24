@@ -33,12 +33,12 @@
 			<br/>
 			<div class="row align-items-center justify-content-center text-center">
 				<div class="col-md-3 col-lg-4">
-					<img src="resources/images/gameD.png" width="256px" height="256px" />
+					<img id="left" src="resources/images/gameD.png" width="256px" height="256px" />
 							<br/><br/>
 							Domestic Ver.
 				</div>
 				<div class="col-md-3 col-lg-4">
-					<img src="resources/images/gameO.png" width="256px" height="256px" />
+					<img id="right" src="resources/images/gameO.png" width="256px" height="256px" />
 							<br/><br/>
 							Overseas Ver.
 				</div>
@@ -46,3 +46,8 @@
 		</div>
 	</section>
 </body>
+<script>
+$(document).on('click', '#left', function(e){
+	$('img#left').attr('src','resources/images/maple-leaf.png')
+});
+</script>
