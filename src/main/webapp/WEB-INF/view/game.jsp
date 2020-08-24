@@ -35,7 +35,7 @@
 				<div class="col-md-3 col-lg-4">
 					<img id="left" src="resources/images/gameD.png" width="256px" height="256px" />
 							<br/><br/>
-							Domestic Ver.
+							<label id="leftText">Domestic Ver.</label>
 				</div>
 				<div class="col-md-3 col-lg-4">
 					<img id="right" src="resources/images/gameO.png" width="256px" height="256px" />
@@ -49,5 +49,6 @@
 <script>
 $(document).on('click', '#left', function(e){
 	$('img#left').attr('src','resources/images/maple-leaf.png')
+	$('label#leftText').text('변경')
 });
 </script>
