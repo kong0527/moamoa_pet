@@ -16,8 +16,7 @@ public class MainController {
 		}*/
 	
 	//임시
-	@RequestMapping("/game")
-	public String game() {
-		return "game";
-	}
+/*
+ * @RequestMapping("/game") public String game() { return "game"; }
+ */
 }
