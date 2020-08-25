@@ -72,12 +72,16 @@
 </body>
 <script>
 //점수는 score로 나타내고 round는 강아지 발자국이 집에 도달하는것으로 측정
+//DB에서 rand() limit 20 으로 10쌍 가져와서 .text(어쩌구..)로 처리
+//JPA로 할지 JDBC로 할지 ?
+//한 단계 할 때마다 그냥 넘어갈지 next 버튼으로 넘어갈지 OR delay를 줄까?
 $(document).ready(function () {
 	$('div#score').hide();
 	$('#round').hide();
 	$('#finish').hide();
 	$('#description').show();
 });
+
 //Domestic Ver. 선택시
 $(document).on('click', '#left', function(e){
 	var round = 0;
