@@ -99,8 +99,8 @@ $(document).on('click', '#left', function(e){
 		score++;
 		$('span#score').text(score)
 		$('#r'+round).attr('src','resources/images/gamePaw.png')
-		$('#leftText').text('변경')
-		$('#rightText').text('변경')
+		$('#leftText').text('콩이')
+		$('#rightText').text('몽시')
 		
 		if (round == 10) {
 			$('#finish').show();
