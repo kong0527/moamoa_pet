@@ -7,7 +7,6 @@
 			SELECT *
 			FROM Domestic
 			ORDER BY RAND()) AS A
-		)
 		GROUP BY A.population
 	</select>
 </mapper>
