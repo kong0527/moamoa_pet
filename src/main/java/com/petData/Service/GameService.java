@@ -14,7 +14,7 @@ public class GameService {
 	@Autowired
 	private GameMapper mapper;
 	
-	public List<Name> gameName() {
-		return mapper.gameName();
+	public List<Name> gameName(String type) {
+		return mapper.gameName(type);
 	}
 }

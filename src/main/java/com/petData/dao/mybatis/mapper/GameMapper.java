@@ -8,5 +8,5 @@ import com.petData.Domain.Name;
 
 @Mapper
 public interface GameMapper {
-	List<Name> gameName();
+	List<Name> gameName(String type);
 }

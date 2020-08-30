@@ -14,7 +14,7 @@ public class MybatisGameDao {
 	@Autowired
 	private GameMapper gameMapper;
 	
-	public List<Name> gameName() {
-		return gameMapper.gameName();
+	public List<Name> gameName(String type) {
+		return gameMapper.gameName(type);
 	}
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.petData.dao.mybatis.mapper.GameMapper">
-	<select id="gameName" resultType="com.petData.Domain.Name">
+	<select id="gameName" resultType="com.petData.Domain.Name" parameterType="String">
 		SELECT *
 		FROM (
 			SELECT *
-			FROM Domestic
+			FROM ${value}
 			ORDER BY RAND()) AS A
 		GROUP BY A.population
 	</select>
