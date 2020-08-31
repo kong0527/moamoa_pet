@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<style>
+#leftText{font-size:30px;}
+#rightText{font-size:30px;}
+</style>
+
 <body data-spy="scroll" data-target=".site-navbar-target"
 	data-offset="300">
 	<section class="site-section">
@@ -60,7 +65,12 @@
 					<div id="rslt">
 						<img id="rsltImg" src=""/>
 					</div>
-					<img id="next" src="resources/images/next.png" width="64px" height="64px" />
+					<br/>
+					<div id="next">
+						<img src="resources/images/next.png" width="64px" height="64px" />
+						<br/>
+						<strong>NEXT</strong>
+					</div>
 					<br>
 				</div>
 				<div class="col-md-3 col-lg-4">
