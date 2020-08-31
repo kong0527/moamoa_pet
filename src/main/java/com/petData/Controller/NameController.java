@@ -4,9 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -47,10 +51,13 @@ public class NameController {
 		return kLetters;
 	}
 	
-	
-	
 	@RequestMapping(value = "/generator", method = { RequestMethod.GET, RequestMethod.POST }) 
-	public ModelAndView generator(ModelAndView mv, HttpServletRequest request, @ModelAttribute("options") NameCommand command) {
+	public ModelAndView generator(ModelAndView mv, HttpServletRequest request, @Valid @ModelAttribute("options") NameCommand command, BindingResult result) {	
+		if (result.hasErrors()) {
+			mv.setViewName("generator");
+			return mv;
+		}
+		
 		//POST방식인 경우(필터링 사용했을 때)
 		if (request.getMethod().equals("POST")) {
 			int flag = letter.checkLetter((int)command.getLetter().charAt(0));

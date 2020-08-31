@@ -1,7 +1,9 @@
 package com.petData.Controller;
 
+import javax.validation.constraints.NotEmpty;
+
 public class NameCommand {
-	//임시 Command 객체
+	@NotEmpty(message="Select a letter!")
 	private String letter;
 	private String frequency;
 	private int flag;

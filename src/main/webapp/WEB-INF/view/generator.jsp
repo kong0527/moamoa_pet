@@ -34,7 +34,7 @@
 											<c:if test="${0 eq status.count % 3}">
 											<br />
 										</c:if>
-									</c:forEach> <!--<form:radiobuttons items="${kLetters}" itemLabel="label" itemValue="letter" path="letter" />-->
+									</c:forEach>
 								</td>
 								<td><c:forEach var="eLetters" items="${eLetters}"
 										varStatus="status">
@@ -43,7 +43,7 @@
 											<c:if test="${0 eq status.count % 4}">
 											<br />
 										</c:if>
-									</c:forEach> <!--<form:radiobuttons items="${eLetters}" itemLabel="label" itemValue="letter" path="letter" />-->
+									</c:forEach>
 								</td>
 							</tr>
 							<tr>
@@ -51,6 +51,7 @@
 								<td></td>
 							</tr>
 						</table>
+						<form:errors path="letter" />
 					</div>
 					<div class="col-md-3 col-lg-3">
 						<label for="selectFrequency">Select Frequency</label> <br /> <select
