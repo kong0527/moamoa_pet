@@ -54,7 +54,7 @@
 				<div class="col-md-3 col-lg-4">
 					<img id="domestic" src="resources/images/gameD.png" width="256px" height="256px" />
 							<br/><br/>
-							<span id="leftText">Domestic Ver.</span>
+							<strong><span id="leftText">Domestic Ver.</span></strong>
 				</div>
 				<div>
 					<div id="rslt">
@@ -66,7 +66,7 @@
 				<div class="col-md-3 col-lg-4">
 					<img id="overseas" src="resources/images/gameO.png" width="256px" height="256px" />
 							<br/><br/>
-							<span id="rightText">Overseas Ver.</span>
+							<strong><span id="rightText">Overseas Ver.</span></strong>
 				</div>
 			</div>
 			<div id="finish" class="row align-items-center justify-content-center text-center">
@@ -75,11 +75,6 @@
 	</section>
 </body>
 <script>
-//점수는 score로 나타내고 round는 강아지 발자국이 집에 도달하는것으로 측정
-//DB에서 rand() limit 20 으로 10쌍 가져와서 .text(어쩌구..)로 처리
-//JPA로 할지 JDBC로 할지 ?
-//한 단계 할 때마다 그냥 넘어갈지 next 버튼으로 넘어갈지 OR delay를 줄까?
-
 var round = 0;
 var score = 0;
 var i = 0;
@@ -127,6 +122,7 @@ $(document).on('click', '#overseas', function(){
 });
 
 $('#next').click(function() {
+	$('#next').hide();
 	$('#no-left').attr('id', 'left');
 	$('#no-right').attr('id', 'right');
 	$('#rsltImg').attr('src','');
@@ -156,7 +152,6 @@ function ready(){
 	$('#overseas').attr('id', 'right');  
 	$('span#score').text(0);
 	$('#description').hide();
-	$('#next').show();
 	$('#score').show();
 	$('#round').show();
 	$('#left').attr('src','resources/images/leftImg.png');
@@ -173,6 +168,7 @@ function game() {
 	
 	$('#r' + round).attr('src', 'resources/images/gamePaw.png')
 	if (left < right) {
+		$('#next').show();
 		if (flag == 2) {
 			score++;
 			$('#rsltImg').attr('src', 'resources/images/smile.png');
@@ -181,6 +177,7 @@ function game() {
 		}
 	}
 	if (left > right) {
+		$('#next').show();
 		if (flag == 1) {
 			score++;
 			$('#rsltImg').attr('src', 'resources/images/smile.png');
