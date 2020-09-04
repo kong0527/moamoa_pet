@@ -5,9 +5,9 @@
 	<select id="getGeneratedName" resultType="com.petData.Domain.Name" parameterType="com.petData.Controller.NameCommand">
 		SELECT *
 		FROM (
-			SELECT * FROM domestic
+			SELECT * FROM Domestic
 			UNION
-			SELECT * FROM overseas
+			SELECT * FROM Overseas
 		) AS T
 		<where>
 			<if test="flag == 1">
