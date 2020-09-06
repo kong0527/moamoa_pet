@@ -104,6 +104,18 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- jar 파일 배포시 tiles에러 해결 위해 추가 -->
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-war-plugin</artifactId>
+			    <configuration>
+			        <webResources>
+			            <resource>
+			                <directory>web</directory>
+			            </resource>
+			        </webResources>
+			    </configuration>
+			</plugin>
 		</plugins>
 	</build>
 
