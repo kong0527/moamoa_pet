@@ -29,9 +29,6 @@ public class GameController {
 		List<Name> nameList = gameService.gameName(type);
 		Collections.shuffle(nameList);
 		nameList = nameList.subList(0, 20);
-		for (int i = 0; i < nameList.size(); i++) {
-			System.out.println(nameList.get(i).getPetName() + " " + nameList.get(i).getPopulation());
-		}
 		return nameList;
 	}
 }
