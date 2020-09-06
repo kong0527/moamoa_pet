@@ -27,14 +27,14 @@ public class ChartService {
 
 	public Page<Domestic> getKBoardList(Pageable pageable) {
         int page = (pageable.getPageNumber() == 0) ? 0 : (pageable.getPageNumber() - 1);
-        pageable = PageRequest.of(page, 20, Sort.by(Sort.Direction.DESC, "population"));
+        pageable = PageRequest.of(page, 20, Sort.by("population").descending().and(Sort.by("petName")));
 
         return kChartRepo.findAll(pageable);
     }
 	
 	public Page<Overseas> getEBoardList(Pageable pageable) {
         int page = (pageable.getPageNumber() == 0) ? 0 : (pageable.getPageNumber() - 1);
-        pageable = PageRequest.of(page, 20, Sort.by(Sort.Direction.DESC, "population"));
+        pageable = PageRequest.of(page, 20, Sort.by("population").descending().and(Sort.by("petName")));
 
         return eChartRepo.findAll(pageable);
     }
