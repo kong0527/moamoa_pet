@@ -25,10 +25,21 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
+		  	<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
 				style="position: relative; top: 3px;">
-				<a href="#" class="site-menu-toggle js-menu-toggle text-black"><span
-					class="icon-menu h3"></span></a>
+				<ul class="nav justify-content-between">
+					<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+						<span class="icon-menu h3">
+						</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="${pageContext.request.contextPath}/kChart" class="nav-link"><span style="color:black">Domestic</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/eChart" class="nav-link"><span style="color:black">Overseas</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/game" class="nav-link"><span style="color:black">Game</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/generator" class="nav-link"><span style="color:black">Generator</span></a></li>
+					</ul>
+				</ul>
 			</div>
 		</div>
 	</div>

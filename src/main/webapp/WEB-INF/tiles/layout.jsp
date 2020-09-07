@@ -30,6 +30,7 @@
 <script src="${pageContext.request.contextPath}/resources/js/jquery-3.3.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/jquery-ui.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 <%-- <script src="${pageContext.request.contextPath}/resources/js/main.js"></script> --%>
 <%-- react.js --%>
