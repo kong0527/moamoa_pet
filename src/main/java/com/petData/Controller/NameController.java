@@ -63,6 +63,7 @@ public class NameController {
 			int flag = letter.checkLetter((int)command.getLetter().charAt(0));
 			command.setFlag(flag);
 			List<Name> generatedNames = service.getGeneratedName(command);
+			
 			mv.addObject("generatedNames", generatedNames);
 		}
 		

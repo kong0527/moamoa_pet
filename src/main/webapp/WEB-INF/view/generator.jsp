@@ -60,7 +60,8 @@
 							<option value="2">3 ~ 10</option>
 							<option value="3">11 ~ 50</option>
 							<option value="4">51 ~ 100</option>
-							<option value="5">101 ~ 500</option>
+							<option value="5">101 ~ 200</option>
+							<option value="6">Over 200</option>
 						</select>
 					</div>
 					<div class="col-md-3 col-lg-3">
@@ -77,8 +78,11 @@
 				class="row align-items-center justify-content-center text-center">
 				<c:if test="${generatedNames eq null }">
 							결과를 보려면 Generate 를 클릭하세요 ! 🐈🐕		
-						</c:if>
-				<c:if test="${generatedNames ne null}">
+				</c:if>
+				<c:if test="${empty generatedNames}">
+					결과가 없네요. 💧				
+				</c:if>
+				<c:if test="${!empty generatedNames}">
 							결과를 확인해 보세요 ! 🐈🐕
 							<br />
 					<br />
@@ -91,8 +95,8 @@
 						</thead>
 						<tbody>
 							<c:forEach var="generatedNames" items="${generatedNames}">
-								<tr>
-									<td align="center">${generatedNames.petName}</td>
+								<tr align="center">
+									<td>${generatedNames.petName}</td>
 									<td>${generatedNames.population}</td>
 								</tr>
 							</c:forEach>

@@ -85,7 +85,10 @@
 		 		 AND <![CDATA[T.population >= 51 AND T.population <= 100]]>
 		 	</if>
 		 	<if test="frequency == 5">
-		 		 AND <![CDATA[T.population >= 101 AND T.population <= 500]]>
+		 		 AND <![CDATA[T.population >= 101 AND T.population <= 200]]>
+		 	</if>
+		 	<if test="frequency == 6">
+		 		 AND <![CDATA[T.population >= 200]]>
 		 	</if>
 		 </where>
 		ORDER BY rand() limit 5
