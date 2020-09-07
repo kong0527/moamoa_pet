@@ -26,24 +26,21 @@
 		<br>
 		<div class="container">
 			<c:if test="${!empty result}">
-				<div class="imageRow">
-					<img src="/resources/images/cat.png" width="200px" height="200px"/>
-					<img src="/resources/images/dog.png" width="200px" height="200px"/>
+				<div style="text-align:center;">
+					<img src="/resources/images/animal.png" class="img-fluid"/>
 				</div>
 				<div style="text-align:center;">
-					<h2>
+					<h3>
 					<b>${result.petName}</b>(은/는) <b>${result.rank}등</b>이에요✨
 					<br>				
-					거리에서 <b>${result.petName}!</b>(이)라고 부르면 <b>${result.population}</b>마리가 뒤돌아봅니다🐱🐶</h2>
+					거리에서 <b>${result.petName}!</b>(이)라고 부르면 <b>${result.population}</b>마리가 뒤돌아봅니다🐱🐶</h3>
 				</div>
 				<br>
 				<br>
 				<c:if test="${!empty recomm}">
 					<h5><strong>이런 동물 이름들도 있어요 👀</strong></h5>
 					<c:forEach var="recomm" items="${recomm}">
-						<c:if test="${result.petName ne recomm.petName}">
 							${recomm.petName}
-						</c:if>
 					</c:forEach>
 				</c:if>
 			</c:if>

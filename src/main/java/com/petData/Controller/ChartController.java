@@ -51,6 +51,7 @@ public class ChartController {
 	public ModelAndView searchKchart(ModelAndView mv, @RequestParam(value="keyword") String keyword) {
 		Domestic result = chartService.searchKchart(keyword);
 		List<Domestic> recommend = chartService.recomKchart(keyword);
+		recommend.remove(result);
 		mv.addObject("result", result);
 		mv.addObject("recomm", recommend);
 		mv.setViewName("kSearch");
@@ -61,6 +62,7 @@ public class ChartController {
 	public ModelAndView searchEchart(ModelAndView mv, @RequestParam(value="keyword") String keyword) {
 		Overseas result = chartService.searchEchart(keyword);
 		List<Overseas> recommend = chartService.recomEchart(keyword);
+		recommend.remove(result);
 		mv.addObject("result", result);
 		mv.addObject("recomm", recommend);
 		mv.setViewName("eSearch");
