@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.petData.dao.mybatis.mapper.NameMapper">
+	<select id="getGeneratedName" resultType="com.petData.Domain.Name" parameterType="com.petData.Controller.NameCommand">
+		SELECT *
+		FROM (
+			SELECT * FROM Domestic
+			UNION
+			SELECT * FROM Overseas
+		) AS T
+		<where>
+			<if test="flag == 1">
+		 		T.petName LIKE CONCAT(#{letter}, '%')
+		 	</if>
+		 	<if test="flag == 2">
+		 		<if test='letter.equals("ㄱ")'>
+		 			binary petName between binary '가' and binary '까'
+		 		</if>
+		 		<if test='letter.equals("ㄲ")'>
+		 			binary petName between binary '까' and binary '나'
+		 		</if>
+		 		<if test='letter.equals("ㄴ")'>
+		 			binary petName between binary '나' and binary '다'
+		 		</if>
+		 		<if test='letter.equals("ㄷ")'>
+		 			binary petName between binary '다' and binary '따'
+		 		</if>
+		 		<if test='letter.equals("ㄸ")'>
+		 			binary petName between binary '따' and binary '라'
+		 		</if>
+		 		<if test='letter.equals("ㄹ")'>
+		 			binary petName between binary '라' and binary '마'
+		 		</if>
+		 		<if test='letter.equals("ㅁ")'>
+		 			binary petName between binary '마' and binary '바'
+		 		</if>
+		 		<if test='letter.equals("ㅂ")'>
+		 			binary petName between binary '바' and binary '빠'
+		 		</if>
+		 		<if test='letter.equals("ㅃ")'>
+		 			binary petName between binary '빠' and binary '사'
+		 		</if>
+		 		<if test='letter.equals("ㅅ")'>
+		 			binary petName between binary '사' and binary '싸'
+		 		</if>
+		 		<if test='letter.equals("ㅆ")'>
+		 			binary petName between binary '싸' and binary '아'
+		 		</if>
+		 		<if test='letter.equals("ㅇ")'>
+		 			binary petName between binary '아' and binary '자'
+		 		</if>
+		 		<if test='letter.equals("ㅈ")'>
+		 			binary petName between binary '자' and binary '짜'
+		 		</if>
+		 		<if test='letter.equals("ㅉ")'>
+		 			binary petName between binary '짜' and binary '차'
+		 		</if>
+		 		<if test='letter.equals("ㅊ")'>
+		 			binary petName between binary '차' and binary '카'
+		 		</if>
+		 		<if test='letter.equals("ㅋ")'>
+		 			binary petName between binary '카' and binary '타'
+		 		</if>
+		 		<if test='letter.equals("ㅌ")'>
+		 			binary petName between binary '타' and binary '파'
+		 		</if>
+		 		<if test='letter.equals("ㅍ")'>
+		 			binary petName between binary '파' and binary '하'
+		 		</if>
+		 		<if test='letter.equals("ㅎ")'>
+		 			binary petName between binary '하' and binary 'chr(0xfe)'
+		 		</if>
+		 	</if>
+		 	<if test="frequency == 1">
+		 		 AND <![CDATA[T.population >= 1 AND T.population <= 2]]>
+		 	</if>
+		 	<if test="frequency == 2">
+		 		 AND <![CDATA[T.population >= 3 AND T.population <= 10]]>
+		 	</if>
+		 	<if test="frequency == 3">
+		 		 AND <![CDATA[T.population >= 11 AND T.population <= 50]]>
+		 	</if>
+		 	<if test="frequency == 4">
+		 		 AND <![CDATA[T.population >= 51 AND T.population <= 100]]>
+		 	</if>
+		 	<if test="frequency == 5">
+		 		 AND <![CDATA[T.population >= 101 AND T.population <= 200]]>
+		 	</if>
+		 	<if test="frequency == 6">
+		 		 AND <![CDATA[T.population >= 200]]>
+		 	</if>
+		 </where>
+		ORDER BY rand() limit 5
+	</select>
+<!-- 한글 처리 어떻게 할지 생각해보기
+ㄱ : select * from 테이블명 where binary 필드명 between binary '가' and binary '나'
+ㄴ : select * from 테이블명 where binary 필드명 between binary '나' and binary '다'
+ㄷ : select * from 테이블명 where binary 필드명 between binary '다' and binary '라'
+...
+ㅎ : select * from 테이블명 where binary 필드명 between binary '하' and binary 'chr(0xfe)'
+-->
+</mapper>
