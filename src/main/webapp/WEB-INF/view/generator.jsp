@@ -76,10 +76,10 @@
 		<div class="container">
 			<div
 				class="row align-items-center justify-content-center text-center">
-				<c:if test="${generatedNames eq null }">
+				<c:if test="${generatedNames eq null}">
 							결과를 보려면 Generate 를 클릭하세요 ! 🐈🐕		
 				</c:if>
-				<c:if test="${empty generatedNames}">
+				<c:if test="${empty generatedNames && generatedNames ne null}">
 					결과가 없네요. 💧				
 				</c:if>
 				<c:if test="${!empty generatedNames}">
