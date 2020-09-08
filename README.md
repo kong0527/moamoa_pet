@@ -56,7 +56,7 @@ moamoa는 말 그대로 반려동물 이름을 모아모아 동물이름 차트�
 <br>
 
 ✅ [AWS 개념 정리](https://github.com/hjyeon-n/BE_TIL/blob/master/AWS%20%EA%B0%9C%EB%85%90%20%EC%A0%95%EB%A6%AC.md) <br/>
-✅ [AWS 적용시 마주한 에러](https://blog.naver.com/o____ri/222084109969) <br/>
+✅ [AWS 적용시 마주한 에러들](https://blog.naver.com/o____ri/222084109969) <br/>
 ✅ [AWS 적용후 알게된 것들](https://blog.naver.com/o____ri/222084138796)
 
 
