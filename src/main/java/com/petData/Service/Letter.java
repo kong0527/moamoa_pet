@@ -59,6 +59,7 @@ public class Letter {
 	public List<Letter> generateE() {
 		List<Letter> letter = new ArrayList<Letter>();
 		
+//		아스키코드를 이용해서 문자 가지고 오기
 		for (int i = 65; i <= 90; i++) {
 			letter.add((new Letter((char)i, (char)i + "　")));
 		}

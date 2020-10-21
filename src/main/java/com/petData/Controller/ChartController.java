@@ -51,6 +51,7 @@ public class ChartController {
 	public ModelAndView searchKchart(ModelAndView mv, @RequestParam(value="keyword") String keyword) {
 		Domestic result = chartService.searchKchart(keyword);
 		List<Domestic> recommend = chartService.recomKchart(keyword);
+//		검색 키워드는 유사 이름 리스트에서 삭제하기
 		recommend.remove(result);
 		mv.addObject("result", result);
 		mv.addObject("recomm", recommend);

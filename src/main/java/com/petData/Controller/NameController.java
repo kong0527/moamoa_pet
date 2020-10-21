@@ -60,6 +60,7 @@ public class NameController {
 		
 		//POST방식인 경우(필터링 사용했을 때)
 		if (request.getMethod().equals("POST")) {
+//			영어인지 한글인지 확인
 			int flag = letter.checkLetter((int)command.getLetter().charAt(0));
 			command.setFlag(flag);
 			List<Name> generatedNames = service.getGeneratedName(command);

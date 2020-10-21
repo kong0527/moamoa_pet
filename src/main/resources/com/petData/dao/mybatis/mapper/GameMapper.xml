@@ -2,11 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.petData.dao.mybatis.mapper.GameMapper">
 	<select id="gameName" resultType="com.petData.Domain.Name" parameterType="String">
+	<!-- 마리 수가 1마리인 것들만 묶일 수 있기 때문에 이를 위해 population으로 그룹화해서 중복을 없앰 -->
 		SELECT *
 		FROM (
 			SELECT *
 			FROM ${value}
-			ORDER BY RAND()) AS A
+			) AS A
 		GROUP BY A.population
+		ORDER BY RAND();
 	</select>
 </mapper>

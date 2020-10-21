@@ -27,6 +27,7 @@ public class ChartService {
 
 	public Page<Domestic> getKBoardList(Pageable pageable) {
         int page = (pageable.getPageNumber() == 0) ? 0 : (pageable.getPageNumber() - 1);
+//        한 페이지당 20개씩 population을 기준으로 내림차순으로 정렬하되, 다시 petName으로 오름차순 정렬
         pageable = PageRequest.of(page, 20, Sort.by("population").descending().and(Sort.by("petName")));
 
         return kChartRepo.findAll(pageable);
@@ -39,11 +40,13 @@ public class ChartService {
         return eChartRepo.findAll(pageable);
     }
 	
+//	이름을 찾기 위해 ByName 
 	public Domestic searchKchart(String keyword) {
 		Domestic result = kChartRepo.findByPetName(keyword);
 		return result;
 	}
 	
+//	유사 이름을 찾기 위해 Containing 사용
 	public List<Domestic> recomKchart(String keyword) {
 		List<Domestic> recommend = kChartRepo.findByPetNameContaining(keyword);
 		return recommend;
