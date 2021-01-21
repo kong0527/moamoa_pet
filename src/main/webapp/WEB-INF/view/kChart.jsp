@@ -37,6 +37,7 @@
 					<tbody>
 						<c:forEach var="pets" items="${pets}">
 							<tr>
+							<!-- 순위별로 이모티콘 다르게 하기  -->
 								<c:choose>
 								<c:when test="${pets.rank == 1}">
 									<td width=200>🥇${pets.rank}</td>
@@ -60,16 +61,21 @@
 			</div>
 		</div>
 	</section>
+	<!-- 페이지 블록은 10개씩  -->
  	<div class="pagination-row" style="text-align: center;">
 		<ul class="custom-pagination list-unstyled">
+		<!--  현재 페이지를 통해 현재 페이지 그룹의 시작 페이지를 구하기  -->
 		<c:set var="start" value="${Math.floor(petList.number / 10) * 10 + 1}"/>
+		<!-- 전체 페이지 수와 현재 페이지 그룹의 시작 페이지를 통해 현재 페이지 그룹의 마지막 페이지를 구하는 로직  -->
 		<c:set var="last" value="${start + 9 < petList.totalPages ? start + 9 : petList.totalPages}"/>
 			<li>
 	    	<a href="${pageContext.request.contextPath}/kChart?page=1" aria-label="First">
 	        	<span aria-hidden="true">First</span>
 	    	</a>
 			</li>
+			<!-- disabled 속성을 통해 화살표 표시 여부 판단 -->
 			<li ${petList.first == true ? 'class=disabled' : ''}>
+			<!-- 현재 페이지가 첫 번째 페이지일 때, 이전의 페이지는 없음 -->
     			<c:if test="${petList.first}">
 					<a href="#"><span aria-hidden="true">&lt;</span></a>
 				</c:if>
@@ -79,6 +85,7 @@
     				</a>
 				</c:if>
 			</li>
+			<!-- 반복문으로 페이지 블록 표시하기  -->
 			<c:forEach begin="${start}" end="${last}" var="page">
 				<li ${page == petList.number + 1 ? 'class=active' : ''}>
 					<a href="${pageContext.request.contextPath}/kChart?page=${page}">${page}</a>
