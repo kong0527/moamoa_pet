@@ -7,7 +7,7 @@ moamoa는 말 그대로 반려동물 이름을 모아모아 동물이름 차트�
 
 # [프로젝트 핵심기능]
 
-1. 차트 <br/>
+1. 차트 <br/> <br/>
 ![Untitled](https://user-images.githubusercontent.com/64277114/166105246-67b63708-d6de-48c5-96d3-1ee25a865994.png)
 
    🐶 차트는 국내(Domestic)와, 국외(Overseas)로 나뉘어집니다.
@@ -20,15 +20,31 @@ moamoa는 말 그대로 반려동물 이름을 모아모아 동물이름 차트�
 
    🐾 검색 기능을 통해 동물 이름 순위와 유사한 동물 이름들을 확인할 수 있습니다.
 
-2. 이름 생성기
+2. 이름 생성기 <br/> <br/>
 
+   ![Untitled (4)](https://user-images.githubusercontent.com/64277114/166105395-10118807-2840-4e77-ad6c-bfb64a5d93ff.png)
+
+   <br/>
    🐶 한글의 초성이나 영어의 알파벳으로 시작하는 이름들을 무작위로 5개 추천받을 수 있습니다.
 
    🐱 select box를 통해 원하는 개체수의 범위 내의 이름들을 추천받을 수 있습니다.
+   <br/> <br/>
+   ![Untitled (5)](https://user-images.githubusercontent.com/64277114/166105415-6b8ab0af-c020-4a6e-bf20-a223bf01e2d2.png)
+   <br/>
+   (이름 생성기 결과 화면)
+   <br/>
 
-3. 게임
+3. 게임 <br/> <br/>
+
+![Untitled (2)](https://user-images.githubusercontent.com/64277114/166105302-4a3570b8-0505-4b9e-afd3-b5cf32684d3f.png)
+<br/>
 
    🐶 주어지는 이름 중 어떤 이름이 더 인기 있는지 맞히는 게임입니다.
+   <br/><br/>
+   ![Untitled (3)](https://user-images.githubusercontent.com/64277114/166105357-8d2e18d6-1b3f-4cc9-92b5-4125df131ff6.png)
+   <br/>
+   (이름을 선택했을 때 우는 이모티콘이 나오면 틀린 것, 웃는 이모티콘이 나오면 맞은 것!)
+   <br/>
 
    🐱 차트처럼 국내(Domestic)와, 국외(Overseas)로 나뉘어집니다.
 
