@@ -8,8 +8,7 @@ moamoa는 말 그대로 반려동물 이름을 모아모아 동물이름 차트�
 # [프로젝트 핵심기능]
 
 1. 차트
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/532491ff-c152-4ab0-af35-333f1a40642b/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/64277114/166105246-67b63708-d6de-48c5-96d3-1ee25a865994.png)
 
    🐶 차트는 국내(Domestic)와, 국외(Overseas)로 나뉘어집니다.
 
