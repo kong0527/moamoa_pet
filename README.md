@@ -9,6 +9,8 @@ moamoa는 말 그대로 반려동물 이름을 모아모아 동물이름 차트�
 
 1. 차트
 
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/532491ff-c152-4ab0-af35-333f1a40642b/Untitled.png)
+
    🐶 차트는 국내(Domestic)와, 국외(Overseas)로 나뉘어집니다.
 
    🐱 차트에서는 동물 이름 순위와 동물 이름을 확인할 수 있습니다.
